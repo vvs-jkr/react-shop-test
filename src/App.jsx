@@ -3,7 +3,6 @@ import Content from './components/Content'
 import Footer from './components/Footer'
 import Header from './components/Header'
 
-import { Router, Routes } from 'react-router-dom'
 import './index.css'
 
 function App() {
@@ -16,10 +15,12 @@ function App() {
   }
 
   return (
-    <div class="wrapper">
-      <Header productsInCart={products.length} />
-      <Content addProductToCart={addProductToCart} />
-      <Footer />
+    <div className="wrapper">
+      <div className='main-content'>
+        <Header productsInCart={products.length} />
+        <Content addProductToCart={addProductToCart} />
+        <Footer />
+      </div>
     </div>
   )
 }
