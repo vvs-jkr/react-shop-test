@@ -1,11 +1,21 @@
-function Header({ productsInCart }) {
+import {useMainContext} from "../context/MainContext";
+import {Link} from "react-router-dom";
+import {useMemo} from "react";
+
+function Header() {
+  const {productsInCart} = useMainContext();
+  const productsCount = useMemo(() => {
+    return productsInCart.reduce((acc, curr) => acc + curr.count, 0);
+  }, [productsInCart]);
+
+
   return (
     <header className="header">
       <div className="navbar">
         <div className="navbar-start">
-          <a href="#" className="logo-link">
+          <Link to="/" className="logo-link">
             QPICK
-          </a>
+          </Link>
         </div>
         <div className="navbar-end">
           <a href="/#" className="btn btn-ghost">
@@ -16,14 +26,14 @@ function Header({ productsInCart }) {
               </span>
             </div>
           </a>
-          <a href="./pages/basket/shopping-cart.html" className="btn btn-ghost">
+          <Link to="/cart" className="btn btn-ghost">
             <div className="indicator">
               <img src="/image/Vector.svg" alt="Shopping Cart" />
               <span className="indicator-item badge badge-accent text-xs h-5 w-5">
-                {productsInCart}
+                {productsCount}
               </span>
             </div>
-          </a>
+          </Link>
         </div>
       </div>
     </header>

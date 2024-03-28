@@ -1,7 +1,9 @@
 import Card from './Card'
-import products from '../products'
+import {useMainContext} from "../context/MainContext";
 
-function Content({ addProductToCart }) {
+function Products() {
+  const { products, addProductToCart } = useMainContext();
+
   return (
     <div className="content">
       <div className="qpick-hero">
@@ -18,4 +20,4 @@ function Content({ addProductToCart }) {
   )
 }
 
-export default Content
+export default Products

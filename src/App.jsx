@@ -1,24 +1,20 @@
 import { useState } from 'react'
-import Content from './components/Content'
+import Products from './components/Products'
 import Footer from './components/Footer'
 import Header from './components/Header'
 
-import { Router, Routes } from 'react-router-dom'
+import {Route, Router, Routes} from 'react-router-dom'
 import './index.css'
+import Cart from "./components/Cart";
 
 function App() {
-  const [products, setProducts] = useState([])
-
-  function addProductToCart(newProduct) {
-    if (!products.some((product) => product.id === newProduct.id)) {
-      setProducts([...products, newProduct])
-    }
-  }
-
   return (
-    <div class="wrapper">
-      <Header productsInCart={products.length} />
-      <Content addProductToCart={addProductToCart} />
+    <div className="wrapper">
+      <Header />
+      <Routes>
+        <Route path="/" element={<Products />} />
+        <Route path="/cart" element={<Cart />} />
+      </Routes>
       <Footer />
     </div>
   )
