@@ -6,6 +6,7 @@ const products = [
     price: 3527,
     discount: 2927,
     rate: 4.7,
+    count: 0,
   },
   {
     id: 2,
@@ -14,6 +15,7 @@ const products = [
     price: 2327,
     discount: 0,
     rate: 4.5,
+    count: 0,
   },
   {
     id: 3,
@@ -22,6 +24,7 @@ const products = [
     price: 2327,
     discount: 0,
     rate: 4.5,
+    count: 0,
   },
   {
     id: 4,
@@ -30,6 +33,7 @@ const products = [
     price: 9527,
     discount: 0,
     rate: 4.7,
+    count: 0,
   },
   {
     id: 5,
@@ -38,6 +42,7 @@ const products = [
     price: 6527,
     discount: 0,
     rate: 4.7,
+    count: 0,
   },
   {
     id: 6,
@@ -46,6 +51,7 @@ const products = [
     price: 7527,
     discount: 0,
     rate: 4.7,
+    count: 0,
   },
 ]
 export default products
