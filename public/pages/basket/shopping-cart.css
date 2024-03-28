@@ -1,0 +1,385 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: #000000;
+  --color-bg: #ffffff;
+  --link-primary: #ff5722;
+  --link-secondary: #ffa542;
+  --gray: #aaaaaa;
+}
+
+/* General styles */
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f3f4f6;
+  color: #333;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1920px;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header styles */
+.header {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  width: 100%;
+  max-width: 1142px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  min-height: 4rem;
+  width: 100%;
+}
+
+.navbar > * {
+  display: inline-flex;
+  align-items: center;
+}
+
+.navbar-start,
+.navbar-end {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.navbar-end {
+  justify-content: flex-end;
+}
+
+.logo-link {
+  cursor: pointer;
+  text-decoration-line: none;
+  font-weight: 700;
+  font-size: 25px;
+}
+
+.logo-link:hover,
+.footer-link:hover,
+.foot-menu > li:hover,
+.menu-horizontal > li:hover {
+  color: var(--link-secondary);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  padding: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-ghost {
+  background-color: transparent;
+}
+
+.btn-ghost:hover {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+.self-start {
+  align-self: flex-start;
+}
+
+.self-end {
+  align-self: flex-end;
+}
+
+.indicator {
+  position: relative;
+  display: inline-flex;
+}
+
+.indicator-item {
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
+  background-color: var(--link-primary);
+  color: var(--color-bg);
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+}
+
+/* Content styles */
+.content {
+  flex: 1 1 auto;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3rem;
+  width: 100%;
+  max-width: 1142px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.catalog-title,
+.basket-cards.catalog-title {
+  width: 100%;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  color: #838383;
+}
+
+.basket-cards h3.catalog-title {
+  color: var(--color-primary);
+}
+
+.qpick-hero {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.q-card {
+  position: relative;
+  min-width: 22rem;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-bg);
+  border-radius: 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.q-card-price {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  background-color: var(--color-bg);
+  border-radius: 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.summary {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 5px;
+}
+
+a.btn-primary {
+  color: var(--color-bg);
+  background-color: var(--color-primary);
+  border-radius: 10px;
+}
+
+.blocks {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+a.btn-primary:hover {
+  color: var(--color-primary);
+  background-color: var(--link-secondary);
+}
+
+.w_750_px {
+  width: 750px;
+}
+
+.w_150_px {
+  width: 100%;
+}
+
+.price-total {
+  color: var(--color-primary);
+  font-weight: 700;
+  font-size: 17px;
+}
+
+.q-card__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.counter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px 50px;
+}
+
+button.counter-btn {
+  color: var(--color-bg);
+  background-color: var(--link-secondary);
+  padding: 5px;
+  border-radius: 50%;
+  width: 40px;
+  font-size: 24px;
+  border: 1px solid var(--link-secondary);
+}
+
+.counter-value {
+  font-weight: 700;
+  font-size: 17px;
+}
+
+button.counter-btn:hover {
+  color: var(--color-primary);
+  background-color: var(--color-bg);
+}
+
+.card__img {
+  width: 100%;
+  height: auto;
+}
+
+.cards {
+  display: flex;
+  width: 100%;
+
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.basket-cards {
+  display: flex;
+  width: 100%;
+
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: start;
+  gap: 1.5rem;
+}
+
+.card-body {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: var(--padding-card, 2rem);
+  gap: 0.5rem;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-info {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.card-info-shipping {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.prices {
+  display: flex;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.discount {
+  text-decoration: line-through;
+  color: var(--link-secondary);
+  margin-right: 0.5rem;
+}
+
+a.btn_buy {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+a.btn_buy:hover {
+  color: var(--link-primary);
+}
+
+.shipping-card-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.shipping-card-rigth {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.price,
+.price.shipping-price {
+  font-weight: 600;
+}
+
+.price {
+  color: var(--link-secondary);
+}
+.price.shipping-price {
+  color: var(--gray);
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+}
+
+.rating-input {
+  display: none;
+}
+
+.rating-input:checked + .text-base-content {
+  color: var(--link-primary);
+}

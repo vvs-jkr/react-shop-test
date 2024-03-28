@@ -1,0 +1,51 @@
+const products = [
+  {
+    id: 1,
+    img: './image/01.png',
+    title: 'Apple',
+    price: 1234,
+    discount: 123,
+    rate: 4.7,
+  },
+  {
+    id: 2,
+    img: './image/02.png',
+    title: 'Apple airpods',
+    price: 123,
+    discount: 12,
+    rate: 4.5,
+  },
+  {
+    id: 3,
+    img: './image/03.png',
+    title: 'Sony WH-1000XM4',
+    price: 329,
+    discount: 20,
+    rate: 4.8,
+  },
+  {
+    id: 4,
+    img: './image/04.png',
+    title: 'Bose QuietComfort 35 II',
+    price: 299,
+    discount: 50,
+    rate: 4.6,
+  },
+  {
+    id: 5,
+    img: './image/05.png',
+    title: 'Sennheiser HD 800 S',
+    price: 1699,
+    discount: 100,
+    rate: 4.9,
+  },
+  {
+    id: 6,
+    img: './image/06.png',
+    title: 'Jabra Elite 85h',
+    price: 199,
+    discount: 10,
+    rate: 4.4,
+  },
+]
+export default products
