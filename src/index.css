@@ -189,14 +189,27 @@ a {
   border: 1px solid var(--link-primary);
 }
 
-.q-card-price {
-  position: relative;
+.q-card-price,
+.q-card-price-total {
   display: flex;
-  flex-direction: row;
   background-color: var(--color-bg);
-  border-radius: 30px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  margin: 10px 0;
+}
+
+.q-card-price {
+  border-radius: 20px;
+}
+
+.q-card-price-total {
+  border-radius: 20px 20px 10px 10px;
+}
+
+.blocks_left {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 70%;
 }
 
 .summary {
@@ -216,6 +229,8 @@ a.btn-primary {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
 }
 
 a.btn-primary:hover {
@@ -223,12 +238,8 @@ a.btn-primary:hover {
   background-color: var(--link-secondary);
 }
 
-.w_750_px {
-  width: 750px;
-}
-
 .w_150_px {
-  width: 100%;
+  flex-basis: auto;
 }
 
 .price-total {
@@ -243,7 +254,7 @@ a.btn-primary:hover {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 20px 50px;
+  padding: 15px 25px;
 }
 
 button.counter-btn {
@@ -251,8 +262,8 @@ button.counter-btn {
   background-color: var(--link-secondary);
   padding: 5px;
   border-radius: 50%;
-  width: 40px;
-  font-size: 24px;
+  width: 25px;
+  font-size: 15px;
   border: 1px solid var(--link-secondary);
 }
 
@@ -269,6 +280,12 @@ button.counter-btn:hover {
 img.card__img {
   width: 100%;
   height: auto;
+}
+
+img.shipping_img {
+  padding: 10px;
+  width: 150px;
+  height: 150px;
 }
 
 .cards {
@@ -304,6 +321,7 @@ img.card__img {
   flex-direction: column;
   padding: var(--padding-card, 2rem);
   gap: 0.5rem;
+  justify-content: flex-end;
 }
 
 .card-title {
@@ -351,6 +369,7 @@ a.btn_buy:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .shipping-card-rigth {

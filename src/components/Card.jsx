@@ -10,8 +10,8 @@ function Card({ product, addProductToCart }) {
         <div className="card-info">
           <h2 className="self-start card-title w-44">{title}</h2>
           <div className="self-end prices">
-            <span className="discount">{discount} &#8381;</span>
             <span className="price">{price} &#8381;</span>
+            <span className="discount">{discount} &#8381;</span>
           </div>
         </div>
         <div className="card-info">
