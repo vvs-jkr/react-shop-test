@@ -16,7 +16,7 @@ export const MainProvider = ({children}) => {
 
       setProductsInCart(updatedProducts);
     } else {
-      setProductsInCart([...productsInCart, newProduct]);
+      setProductsInCart([...productsInCart, {...newProduct, count: newProduct.count + 1}]);
     }
   }
 
